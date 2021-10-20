@@ -60,8 +60,8 @@ class YDiskUploader:
         return result
 
 if __name__ == '__main__':
-    with open("token.txt", encoding="utf8") as tokenfile:
+    with open("token.txt", encoding="utf-8") as tokenfile:
         token = tokenfile.read().strip()
-    uploader = YDiskUploader('test.txt', token=token, destination_folder='', encoding="utf8")
+    uploader = YDiskUploader('test.txt', token=token, destination_folder='/', encoding="utf-8")
     result = uploader.upload()
     print(result["msg"])
